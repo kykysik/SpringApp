@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:util ="http://www.springframework.org/schema/util"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+ 		http://www.springframework.org/schema/beans
+ 		http://www.springframework.org/schema/beans/spring-beans-3.2.xsd
+
+        http://www.springframework.org/schema/util
+        http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+
+    <context:annotation-config/>
+   <!-- <import resource="loggers.xml"/>
+    <import resource="others.xml"/>
+
+    <bean class="com.PropertyPlaceholderConfigurer">
+        <property name="locations">
+            <list>
+                <value>classpath:client.properties</value>
+            </list>
+        </property>
+        <property name="ignoreResourceNotFound" value="true" />
+        <property name="systemPropertiesModeName" value="SYSTEM_PROPERTIES_MODE_OVERRIDE" />
+    </bean>
+
+
+
+    <bean id="client" class="com.beans.Client" p:greeting="${greeting}">
+
+        <constructor-arg index="0" value="${id}"/>
+        <constructor-arg value="${name}"/>
+    </bean>
+
+    <bean id="app" class="com.App">
+        <constructor-arg ref="client"/>
+        <constructor-arg ref="eventLogger"/>
+        <constructor-arg ref="loggerMap"/>
+    </bean>
+
+    <util:map id="loggerMap">
+        <entry key="INFO"
+               value-ref="eventLogger"/>
+        <entry key="ERROR"
+               value-ref="CombinedEventLogger"/>
+    </util:map>
+
+    <util:properties id="clientProps"
+                     location="classpath:client.properties"/>-->
+</beans>
